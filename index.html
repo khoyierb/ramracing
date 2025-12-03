@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Racing</title>
+    <style>
+        /* Reset & basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e4d2b; /* CSU green */
+            color: #ffc72c; /* CSU gold */
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #145214; /* dark green */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffc72c;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+            font-weight: bold;
+            transition: background 0.3s;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: #2a702f;
+        }
+
+        /* Main content */
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .tab {
+            background-color: #1e4d2b;
+            color: #ffc72c;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #2a702f;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Images */
+        .tab-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Section headings */
+        .tab-content h2 {
+            margin-bottom: 12px;
+            color: #1e4d2b;
+        }
+
+        .tab-content h3 {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #145214;
+        }
+
+        /* Paragraph spacing */
+        .tab-content p {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ram Racing</h1>
+        <p>Exploring the World of Game Development</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab" data-tab="overview">Overview</div>
+            <div class="tab" data-tab="resources">Resources</div>
+            <div class="tab" data-tab="team">Team</div>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <h2>Overview</h2>
+
+            <h3>Concept & Idea</h3>
+            <p>Ram Racing started as a simple idea: create a high-speed racing game where players can customize their vehicles and compete on challenging tracks. The concept focuses on fun, skill-based racing with dynamic environments.</p>
+            <img src="https://via.placeholder.com/800x400?text=Concept+%26+Idea" alt="Game Concept">
+
+            <h3>Game Design</h3>
+            <p>Our team carefully designed each track to offer unique challenges, balancing speed and strategy. We mapped out car physics to provide realistic yet exciting gameplay, and designed an intuitive interface for smooth player interactions.</p>
+            <img src="https://via.placeholder.com/800x400?text=Game+Design" alt="Game Design">
+
+            <h3>Art & Assets</h3>
+            <p>We created custom 3D models and textures for each car and track. Animations were designed for smooth movement, and sound effects bring the racing experience to life.</p>
+            <img src="https://via.placeholder.com/800x400?text=Art+%26+Assets" alt="Art and Assets">
+            <h3>Programming & Engine</h3>
+            <p>The game was developed in Unity using C#. Our code handles vehicle physics, AI opponents, collision detection, and scoring systems to ensure a fun and fair racing experience.</p>
+            <img src="https://via.placeholder.com/800x400?text=Programming+%26+Engine" alt="Programming and Engine">
+
+            <h3>Testing & Iteration</h3>
+            <p>Testing was an essential part of development. We ran multiple iterations to refine gameplay, fix bugs, and improve track designs based on feedback from playtests.</p>
+            <img src="https://via.placeholder.com/800x400?text=Testing+%26+Iteration" alt="Testing and Iteration">
+
+            <h3>Launch & Updates</h3>
+            <p>After rigorous testing, Ram Racing is ready to be enjoyed by players. We plan to release updates with new tracks, cars, and features based on player feedback.</p>
+            <img src="https://via.placeholder.com/800x400?text=Launch+%26+Updates" alt="Launch and Updates">
+        </div>
+
+        <!-- Resources Tab -->
+        <div id="resources" class="tab-content">
+            <h2>Resources</h2>
+
+            <h3>Tutorials & Guides</h3>
+            <p>We provide a variety of tutorials for learning game development. These include step-by-step guides for Unity, coding practices, and design tips to help new developers get started quickly.</p>
+            <img src="https://via.placeholder.com/800x400?text=Tutorials" alt="Tutorials">
+
+            <h3>Asset Libraries</h3>
+            <p>Access free and paid resources for 3D models, textures, sound effects, and music. Using high-quality assets helps accelerate development and improve game visuals.</p>
+            <img src="https://via.placeholder.com/800x400?text=Assets" alt="Assets">
+
+            <h3>Community & Forums</h3>
+            <p>Join game development communities for advice, collaboration, and feedback. Forums like GameDev.net, Reddit's game dev threads, and Unity forums provide valuable support.</p>
+            <img src="https://via.placeholder.com/800x400?text=Community+Forums" alt="Community">
+        </div>
+
+        <!-- Team Tab -->
+        <div id="team" class="tab-content">
+            <h2>Team</h2>
+
+            <h3>Development Team</h3>
+            <p>Our team consists of programmers, artists, designers, and sound engineers. Each member brings unique skills and experience to ensure Ram Racing is both fun and polished.</p>
+            <img src="https://via.placeholder.com/800x400?text=Development+Team" alt="Development Team">
+
+            <h3>Roles & Responsibilities</h3>
+            <p>Programmers handle game logic and AI, artists create models and textures, designers plan levels and mechanics, and sound engineers add effects and music to enhance immersion.</p>
+            <img src="https://via.placeholder.com/800x400?text=Roles+%26+Responsibilities" alt="Roles and Responsibilities">
+
+            <h3>Team Highlights</h3>
+            <p>We encourage collaboration, creativity, and continuous learning. Our team celebrates milestones, shares ideas, and works together to deliver a top-quality gaming experience.</p>
+            <img src="https://via.placeholder.com/800x400?text=Team+Highlights" alt="Team Highlights">
+        </div>
+    </main>
+
+    <!-- JavaScript for tab switching -->
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                contents.forEach(content => content.classList.remove('active'));
+                const activeContent = document.getElementById(tab.dataset.tab);
+                activeContent.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
