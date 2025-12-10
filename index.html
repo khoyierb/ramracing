@@ -89,65 +89,73 @@
 
     <!-- Overview -->
     <div id="overview" class="tab-content active">
-      
+        <h2>Overview</h2>
+        <h3>Concept & Game Design</h3>
+        <p>Throughout this semester our team worked on a game called Ram Racing. Our initial idea was to develop a Mario-Kart esque game involving more of a CSU Ram theme to it. This project was challenging for various reasons, but our group believes this was overall beneficial for us to learn and understand the project management process.</p>
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" alt="Kart racing concept">
     </div>
 
-
+    <!-- Resources -->
     <div id="resources" class="tab-content">
-     
+        <h2>Resources</h2>
+        <h3>Community & Forums</h3>
+        <p>GameDev.net, Unity Forums, and YouTube tutorials were invaluable resources for learning and troubleshooting.</p>
+        <div class="gallery">
+            <img src="https://placekitten.com/400/300" alt="Resource 1">
+            <img src="https://placekitten.com/401/300" alt="Resource 2">
+            <img src="https://placekitten.com/402/300" alt="Resource 3">
+        </div>
     </div>
 
-    
+    <!-- Team -->
     <div id="team" class="tab-content">
-        
+        <h2>Team</h2>
+        <h3>Team Development</h3>
+        <p>Our team consisted of Computer Science and Computer Information Systems students. <br> At the beginning of the semester we all agreed to have a degree of interest in video games thus we came up with the idea for Ram Racing. </p>
+
+        <h3>Members</h3>
+        <div class="team-cards">
+            <div class="team-card">
+                <h4>Brandon Choi</h4>
+                <p>Project Manager — Junior at Colorado State University majoring in Computer Science with a concentration in computing for creatives.</p>
+            </div>
+            <div class="team-card">
+                <h4>Jackson Crockett</h4>
+                <p>Level Design — Junior at Colorado State University majoring in Computer Information Systems.</p>
+            </div>
+            <div class="team-card">
+                <h4>Dee Castine</h4>
+                <p>USAF Veteran | M.F.A Animation <br> Studying Computer Science: software engineering with an interest in pursuing roles as a Technical Artist or other General Computer Science careers</p>
+            </div>
+            <div class="team-card">
+                <h4>Mason Burns</h4>
+                <p>Technical Artist — Junior at CSU majoring in Computer Information Systems.</p>
+            </div>
+            <div class="team-card">
+                <h4>Josh Goodrich</h4>
+                <p>Secondary Programmer — Junior at CSU majoring in Computer Science.</p>
+            </div>
+            <div class="team-card">
+                <h4>Khoyier Bondhus</h4>
+                <p>Website Design — Junior at CSU majoring in Computer Information Systems.</p>
+            </div>
+        </div>
+
+        <h3>Team Highlights</h3>
+        <p>Our team collaborated by combining diverse skills in programming, and design, while also learning the ins and outs of project management.<br> Despite busy schedules, and difficulties developing the game due to scope creep, we were able to support each other and still construct a working product.</p>
     </div>
 </main>
 
 <footer>
     <p>© 2025 Ram Racing — All Rights Reserved</p>
     <div class="contact-logos">
-        <!-- CSU Ram logo as email link -->
+        <!-- CSU-themed contact logos -->
         <a href="mailto:ramracing@colostate.edu" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Colorado_State_Rams_logo.svg" alt="Email CSU Ram">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Colorado_State_Rams_logo.svg/1200px-Colorado_State_Rams_logo.svg.png" alt="Email CSU Ram">
         </a>
-        <!-- GitHub -->
         <a href="https://github.com/yourteam" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
         </a>
-        <!-- LinkedIn -->
         <a href="https://linkedin.com/in/yourteam" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-        </a>
-    </div>
-</footer>
-
-<script>
-    const tabs = document.querySelectorAll(".tab");
-    const contents = document.querySelectorAll(".tab-content");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    function switchTab(tabName){
-        contents.forEach(c => c.classList.remove("active"));
-        tabs.forEach(t => t.classList.remove("active"));
-        navLinks.forEach(n => n.classList.remove("active"));
-
-        const activeContent = document.getElementById(tabName);
-        if (activeContent) {
-            activeContent.classList.add("active");
-        }
-
-        const activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`);
-        const activeLink = document.querySelector(`.nav-link[data-tab="${tabName}"]`);
-        if (activeTab) activeTab.classList.add("active");
-        if (activeLink) activeLink.classList.add("active");
-    }
-
-    tabs.forEach(tab => tab.addEventListener("click", () => switchTab(tab.dataset.tab)));
-    navLinks.forEach(link => link.addEventListener("click", e => {
-        e.preventDefault();
-        switchTab(link.dataset.tab);
-    }));
-</script>
-
-</body>
-</html>
+            <img src="
+               
