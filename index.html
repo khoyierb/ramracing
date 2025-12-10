@@ -5,36 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ram Racing</title>
 <style>
-    /* Reset */
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Arial', sans-serif; background:#eef1ef; color:#333; font-size:14px; line-height:1.4; }
 
-    /* Header */
     header { background: linear-gradient(120deg,#1e4d2b,#145214); color:#ffc72c; text-align:center; padding:15px 5px; }
     header h1 { font-size:2em; margin-bottom:4px; }
     header p { font-size:1em; }
 
-    /* Navigation */
     nav { background:#145214; position:sticky; top:0; z-index:999; }
     nav ul { list-style:none; display:flex; justify-content:center; padding:6px 0; flex-wrap:wrap; }
     nav ul li { margin:0 8px; }
     nav ul li a { color:#ffc72c; text-decoration:none; padding:4px 8px; font-weight:bold; font-size:0.9em; border-radius:3px; transition:0.3s; }
     nav ul li a:hover, nav ul li a.active { background:#2b6e35; }
 
-    /* Main */
     main { max-width:1000px; margin:20px auto; padding:20px; background:#fff; border-radius:6px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
 
-    /* Tabs */
     .tabs { display:flex; justify-content:center; gap:10px; margin-bottom:15px; flex-wrap:wrap; }
     .tab { background:#1e4d2b; color:#ffc72c; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold; font-size:0.9em; }
     .tab:hover { background:#2b6e35; }
     .tab.active { background:#ffc72c; color:#1e4d2b; border:1px solid #1e4d2b; }
 
-    /* Tab Content */
     .tab-content { display:none; }
     .tab-content.active { display:block; }
 
-    /* Images */
     .tab-content img {
         width:80%;
         max-width:700px;
@@ -44,31 +37,32 @@
         border-radius:6px;
     }
 
-    /* Headings and paragraphs */
     .tab-content h2 { font-size:1.4em; margin-bottom:8px; }
     .tab-content h3 { font-size:1.1em; margin:10px 0 4px; }
     .tab-content p { font-size:0.95em; margin-bottom:10px; }
 
-    /* Footer */
     footer { background:#1e4d2b; color:#ffc72c; text-align:center; padding:10px 0; font-size:0.85em; margin-top:20px; }
     footer a { color:#ffc72c; margin:0 8px; text-decoration:none; }
     footer a:hover { text-decoration:underline; }
 
-    /* Contact Form */
-    form { max-width:500px; margin:auto; text-align:left; }
-    form input, form textarea { width:100%; padding:8px; margin-bottom:12px; border:1px solid #ccc; border-radius:4px; font-size:0.9em; }
-    form button { background:#1e4d2b; color:#ffc72c; padding:8px 16px; border:none; border-radius:4px; cursor:pointer; font-size:0.9em; }
-    form button:hover { background:#2b6e35; }
-
-    /* Gallery */
     .gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:10px; }
     .gallery img { width:45%; max-width:400px; border-radius:6px; }
 
-    /* Team Cards */
     .team-cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:15px; }
     .team-card { flex:1 1 300px; background:#f4f4f4; padding:15px; border-radius:8px; }
     .team-card h4 { margin-bottom:6px; font-size:1.1em; color:#1e4d2b; }
     .team-card p { font-size:0.9em; }
+
+    /* Contact logos */
+    .contact-logos { margin-top:10px; }
+    .contact-logos img {
+        width:36px;
+        height:36px;
+        margin:0 10px;
+        vertical-align:middle;
+        transition:transform 0.2s;
+    }
+    .contact-logos img:hover { transform:scale(1.2); }
 </style>
 </head>
 <body>
@@ -83,7 +77,6 @@
         <li><a href="#" class="nav-link active" data-tab="overview">Overview</a></li>
         <li><a href="#" class="nav-link" data-tab="resources">Resources</a></li>
         <li><a href="#" class="nav-link" data-tab="team">Team</a></li>
-        <li><a href="#" class="nav-link" data-tab="contact">Contact</a></li>
     </ul>
 </nav>
 
@@ -92,111 +85,63 @@
         <div class="tab active" data-tab="overview">Overview</div>
         <div class="tab" data-tab="resources">Resources</div>
         <div class="tab" data-tab="team">Team</div>
-        <div class="tab" data-tab="contact">Contact</div>
     </div>
 
     <!-- Overview -->
     <div id="overview" class="tab-content active">
-        <h2>Overview</h2>
-        <h3>Concept & Game Design</h3>
-        <p>Throughout this semester our team worked on a game called Ram Racing. Our initial idea was to develop a Mario-Kart esque game involving more of a CSU Ram theme to it. This project was challenging for various reasons, but our group believes this was overall beneficial for us to learn and understand the project management process.</p>
-        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" alt="Kart racing concept">
+      
     </div>
 
-    <!-- Resources -->
-    <div id="resources" class="tab-content active">
-        <h2>Resources</h2>
-        <h3>Community & Forums</h3>
-        <p>GameDev.net, Unity Forums, and other sites like YouTube...</p>
-        <div class="gallery">
-            <img src="https://placekitten.com/400/300" alt="Resource 1">
-            <img src="https://placekitten.com/401/300" alt="Resource 2">
-            <img src="https://placekitten.com/402/300" alt="Resource 3">
-        </div>
+
+    <div id="resources" class="tab-content">
+     
     </div>
 
-    <!-- Team -->
-    <div id="team" class="tab-content active">
-        <h2>Team</h2>
-        <h3>Team Development</h3>
-        <p> Our team consisted of Computer Science and Computer Information Systems students. <br> At the beginning of the semester we all agreed to have a degree of interest in video games thus we came up with the idea for Ram Racing. </p>
-
-        <h3>Members</h3>
-        <div class="team-cards">
-            <div class="team-card">
-                <h4>Brandon Choi</h4>
-                <p>Project Manager — Junior at Colorado State University majoring in Computer Science with a concentration in computing for creatives.  </p>
-            </div>
-            <div class="team-card">
-                <h4>Jackson Crockett</h4>
-                <p>Level Design - Junior at Colorado State University majoring in Computer Information Systems.</p>
-            </div>
-            <div class="team-card">
-                <h4>Dee Castine</h4>
-                <p>USAF Veteran | M.F.A Animation <br> Studying Computer Science: software engineering with an interest in pursuing roles as a Technical Artist or other General Computer Science careers</p>
-            </div>
-            <div class="team-card">
-                <h4>Mason Burns</h4>
-                <p>Technical Artist - Junior at Colorado State University majoring in Computer Information Systems.</p>
-            </div>
-            <div class="team-card">
-          <h4>Josh Goodrich</h4>
-          <p>Secondary Programmer - Junior at Colorado State University majoring in Computer Science. </p>
-        </div>
-        <div class ="team-card">
-            <h4>Khoyier Bondhus</h4>
-            <p>Website Design - Junior at Colorado State University majoring in Computer Information Systems. </p>
-                
-
-        <h3>Team Highlights</h3>
-        <p>Our team collaborated by combining diverse skills in programming, and design, while also learning the ins and outs of project management.<br> Despite busy schedules, and difficulties developing the game due to scope creep, we were able to support each other and still construct a large chunk of the project.</p>
-    </div>
-
-    <!-- Contact -->
-    <div id="contact" class="tab-content">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br>
-            <button type="submit">Send</button>
-        </form>
+    
+    <div id="team" class="tab-content">
+        
     </div>
 </main>
 
 <footer>
-    <p>© 2025 Ram Racing - All Rights Reserved
+    <p>© 2025 Ram Racing — All Rights Reserved</p>
+    <div class="contact-logos">
+        <!-- CSU Ram logo as email link -->
+        <a href="mailto:ramracing@colostate.edu" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Colorado_State_Rams_logo.svg" alt="Email CSU Ram">
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/yourteam" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/yourteam" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+    </div>
 </footer>
-    
-        <script>
+
+<script>
     const tabs = document.querySelectorAll(".tab");
     const contents = document.querySelectorAll(".tab-content");
     const navLinks = document.querySelectorAll(".nav-link");
 
     function switchTab(tabName){
-        // Hide everything
         contents.forEach(c => c.classList.remove("active"));
         tabs.forEach(t => t.classList.remove("active"));
         navLinks.forEach(n => n.classList.remove("active"));
 
-        // Show the selected content
         const activeContent = document.getElementById(tabName);
         if (activeContent) {
             activeContent.classList.add("active");
-            activeContent.scrollIntoView({ behavior: "smooth" });
         }
 
-        // Highlight the selected tab + nav link
         const activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`);
         const activeLink = document.querySelector(`.nav-link[data-tab="${tabName}"]`);
         if (activeTab) activeTab.classList.add("active");
         if (activeLink) activeLink.classList.add("active");
     }
 
-    // Event listeners
     tabs.forEach(tab => tab.addEventListener("click", () => switchTab(tab.dataset.tab)));
     navLinks.forEach(link => link.addEventListener("click", e => {
         e.preventDefault();
@@ -204,3 +149,5 @@
     }));
 </script>
 
+</body>
+</html>
