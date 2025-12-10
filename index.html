@@ -7,26 +7,26 @@
 <style>
     /* Reset */
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Arial', sans-serif; background:#eef1ef; color:#333; font-size:12px; line-height:1.2; }
+    body { font-family:'Arial', sans-serif; background:#eef1ef; color:#333; font-size:14px; line-height:1.4; }
 
     /* Header */
-    header { background: linear-gradient(120deg,#1e4d2b,#145214); color:#ffc72c; text-align:center; padding:10px 5px; }
-    header h1 { font-size:1.6em; margin-bottom:2px; }
-    header p { font-size:0.8em; }
+    header { background: linear-gradient(120deg,#1e4d2b,#145214); color:#ffc72c; text-align:center; padding:15px 5px; }
+    header h1 { font-size:2em; margin-bottom:4px; }
+    header p { font-size:1em; }
 
     /* Navigation */
     nav { background:#145214; position:sticky; top:0; z-index:999; }
-    nav ul { list-style:none; display:flex; justify-content:center; padding:4px 0; flex-wrap:wrap; }
-    nav ul li { margin:0 5px; }
-    nav ul li a { color:#ffc72c; text-decoration:none; padding:2px 5px; font-weight:bold; font-size:0.75em; border-radius:3px; transition:0.3s; }
-    nav ul li a:hover { background:#2b6e35; }
+    nav ul { list-style:none; display:flex; justify-content:center; padding:6px 0; flex-wrap:wrap; }
+    nav ul li { margin:0 8px; }
+    nav ul li a { color:#ffc72c; text-decoration:none; padding:4px 8px; font-weight:bold; font-size:0.9em; border-radius:3px; transition:0.3s; }
+    nav ul li a:hover, nav ul li a.active { background:#2b6e35; }
 
     /* Main */
-    main { max-width:900px; margin:10px auto; padding:10px; background:#fff; border-radius:5px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+    main { max-width:1000px; margin:20px auto; padding:20px; background:#fff; border-radius:6px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
 
     /* Tabs */
-    .tabs { display:flex; justify-content:center; gap:5px; margin-bottom:10px; flex-wrap:wrap; }
-    .tab { background:#1e4d2b; color:#ffc72c; padding:4px 8px; border-radius:4px; cursor:pointer; font-weight:bold; font-size:0.75em; }
+    .tabs { display:flex; justify-content:center; gap:10px; margin-bottom:15px; flex-wrap:wrap; }
+    .tab { background:#1e4d2b; color:#ffc72c; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold; font-size:0.9em; }
     .tab:hover { background:#2b6e35; }
     .tab.active { background:#ffc72c; color:#1e4d2b; border:1px solid #1e4d2b; }
 
@@ -35,33 +35,40 @@
     .tab-content.active { display:block; }
 
     /* Images */
-    .tab-content img { width:40%; max-width:250px; height:auto; display:block; margin:5px auto; border-radius:4px; }
+    .tab-content img {
+        width:80%;
+        max-width:700px;
+        height:auto;
+        display:block;
+        margin:20px auto;
+        border-radius:6px;
+    }
 
     /* Headings and paragraphs */
-    .tab-content h2 { font-size:1em; margin-bottom:2px; }
-    .tab-content h3 { font-size:0.85em; margin:3px 0 1px; }
-    .tab-content p { font-size:0.75em; margin-bottom:3px; }
+    .tab-content h2 { font-size:1.4em; margin-bottom:8px; }
+    .tab-content h3 { font-size:1.1em; margin:10px 0 4px; }
+    .tab-content p { font-size:0.95em; margin-bottom:10px; }
 
     /* Footer */
-    footer { background:#1e4d2b; color:#ffc72c; text-align:center; padding:5px 0; font-size:0.7em; margin-top:10px; }
-    footer a { color:#ffc72c; margin:0 5px; text-decoration:none; }
+    footer { background:#1e4d2b; color:#ffc72c; text-align:center; padding:10px 0; font-size:0.85em; margin-top:20px; }
+    footer a { color:#ffc72c; margin:0 8px; text-decoration:none; }
     footer a:hover { text-decoration:underline; }
 
     /* Contact Form */
-    form { max-width:400px; margin:auto; text-align:left; }
-    form input, form textarea { width:100%; padding:5px; margin-bottom:8px; border:1px solid #ccc; border-radius:4px; }
-    form button { background:#1e4d2b; color:#ffc72c; padding:6px 12px; border:none; border-radius:4px; cursor:pointer; }
+    form { max-width:500px; margin:auto; text-align:left; }
+    form input, form textarea { width:100%; padding:8px; margin-bottom:12px; border:1px solid #ccc; border-radius:4px; font-size:0.9em; }
+    form button { background:#1e4d2b; color:#ffc72c; padding:8px 16px; border:none; border-radius:4px; cursor:pointer; font-size:0.9em; }
     form button:hover { background:#2b6e35; }
 
     /* Gallery */
-    .gallery { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
-    .gallery img { width:30%; border-radius:4px; }
+    .gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:10px; }
+    .gallery img { width:45%; max-width:400px; border-radius:6px; }
 
     /* Team Cards */
-    .team-cards { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:10px; }
-    .team-card { flex:1 1 250px; background:#f4f4f4; padding:10px; border-radius:6px; }
-    .team-card h4 { margin-bottom:4px; font-size:0.9em; color:#1e4d2b; }
-    .team-card p { font-size:0.75em; }
+    .team-cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:15px; }
+    .team-card { flex:1 1 300px; background:#f4f4f4; padding:15px; border-radius:8px; }
+    .team-card h4 { margin-bottom:6px; font-size:1.1em; color:#1e4d2b; }
+    .team-card p { font-size:0.9em; }
 </style>
 </head>
 <body>
@@ -73,7 +80,7 @@
 
 <nav>
     <ul>
-        <li><a href="#" class="nav-link" data-tab="overview">Overview</a></li>
+        <li><a href="#" class="nav-link active" data-tab="overview">Overview</a></li>
         <li><a href="#" class="nav-link" data-tab="resources">Resources</a></li>
         <li><a href="#" class="nav-link" data-tab="team">Team</a></li>
         <li><a href="#" class="nav-link" data-tab="contact">Contact</a></li>
@@ -93,7 +100,7 @@
         <h2>Overview</h2>
         <h3>Concept & Game Design</h3>
         <p>Ram Racing is a fast-paced, skill-driven racing game...</p>
-        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=400&q=80" alt="Kart racing concept">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" alt="Kart racing concept">
     </div>
 
     <!-- Resources -->
@@ -102,9 +109,9 @@
         <h3>Community & Forums</h3>
         <p>GameDev.net, Unity Forums, and other sites like YouTube...</p>
         <div class="gallery">
-            <img src="https://placekitten.com/200/200" alt="Resource 1">
-            <img src="https://placekitten.com/201/200" alt="Resource 2">
-            <img src="https://placekitten.com/202/200" alt="Resource 3">
+            <img src="https://placekitten.com/400/300" alt="Resource 1">
+            <img src="https://placekitten.com/401/300" alt="Resource 2">
+            <img src="https://placekitten.com/402/300" alt="Resource 3">
         </div>
     </div>
 
@@ -156,6 +163,3 @@
 <footer>
     <p>© 2025 Ram Racing — All Rights Reserved</p>
     <div>
-        <a href="https://twitter.com" target="_blank">Twitter</a> |
-        <a href="https://github.com" target="_blank">GitHub</a> |
-        <a href="https://linkedin
