@@ -148,47 +148,45 @@
 
 <footer>
     <p>© 2025 Ram Racing — All Rights Reserved</p>
-
-   
-   <script> 
-const tabs = document.querySelectorAll(".tab"); 
-const contents = document.querySelectorAll(".tab-content"); 
-const navLinks = document.querySelectorAll(".nav-link"); 
- 
-function switchTab(tabName){ 
-    // Hide everything 
-    contents.forEach(c => c.classList.remove("active")); 
-    tabs.forEach(t => t.classList.remove("active")); 
-    navLinks.forEach(n => n.classList.remove("active")); 
- 
-    // Show the selected content 
-    const activeContent = document.getElementById(tabName); 
-    if (activeContent) { 
-        activeContent.classList.add("active"); 
-        activeContent.scrollIntoView({ behavior: "smooth" }); 
-    } 
- 
-    // Highlight the selected tab + nav link 
-    const activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`); 
-    const activeLink = document.querySelector(`.nav-link[data-tab="${tabName}"]`); 
-    if (activeTab) activeTab.classList.add("active"); 
-    if (activeLink) activeLink.classList.add("active"); 
-} 
- 
-// Event listeners 
-tabs.forEach(tab => tab.addEventListener("click", () => switchTab(tab.dataset.tab))); 
-navLinks.forEach(link => link.addEventListener("click", e => { 
-    e.preventDefault(); 
-    switchTab(link.dataset.tab); 
-}));
     <div class="contact-logos">
         <!-- CSU-themed contact logos -->
         <a href="mailto:ramracing@colostate.edu" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Colorado_State_Rams_logo.svg/1200px-Colorado_State_Rams_logo.svg.png" alt="Email CSU Ram">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
         </a>
         <a href="https://github.com/yourteam" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
         </a>
         <a href="https://linkedin.com/in/yourteam" target="_blank">
-            <img src="
-               
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+    </div>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll(".tab"); 
+const contents = document.querySelectorAll(".tab-content"); 
+const navLinks = document.querySelectorAll(".nav-link"); 
+
+function switchTab(tabName){ 
+    contents.forEach(c => c.classList.remove("active")); 
+    tabs.forEach(t => t.classList.remove("active")); 
+    navLinks.forEach(n => n.classList.remove("active")); 
+
+    const activeContent = document.getElementById(tabName); 
+    if (activeContent) activeContent.classList.add("active"); 
+
+    const activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`); 
+    const activeLink = document.querySelector(`.nav-link[data-tab="${tabName}"]`); 
+    if (activeTab) activeTab.classList.add("active"); 
+    if (activeLink) activeLink.classList.add("active"); 
+} 
+
+tabs.forEach(tab => tab.addEventListener("click", () => switchTab(tab.dataset.tab))); 
+navLinks.forEach(link => link.addEventListener("click", e => { 
+    e.preventDefault(); 
+    switchTab(link.dataset.tab); 
+}));
+</script>
+
+</body>
+</html>
