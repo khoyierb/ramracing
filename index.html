@@ -99,7 +99,7 @@
     <div id="overview" class="tab-content active">
         <h2>Overview</h2>
         <h3>Concept & Game Design</h3>
-        <p>Throughout this semester our team worked on a game called Ram Racing. Our initial idea was to develop a Mario-Kart esque game involving more of a CSU Ram theme to it. <br>This project was challenging for various reasons, but our group believes this was overall beneficial for us to learn and understand the project management process.</p>
+        <p>Throughout this semester our team worked on a game called Ram Racing. Our initial idea was to develop a Mario-Kart esque game involving more of a CSU Ram theme to it. This project was challenging for various reasons, but our group believes this was overall beneficial for us to learn and understand the project management process.</p>
         <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" alt="Kart racing concept">
     </div>
 
@@ -168,4 +168,39 @@
 </main>
 
 <footer>
-    <p>© 2025
+    <p>© 2025 Ram Racing - All Rights Reserved
+</footer>
+    
+        <script>
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function switchTab(tabName){
+        // Hide everything
+        contents.forEach(c => c.classList.remove("active"));
+        tabs.forEach(t => t.classList.remove("active"));
+        navLinks.forEach(n => n.classList.remove("active"));
+
+        // Show the selected content
+        const activeContent = document.getElementById(tabName);
+        if (activeContent) {
+            activeContent.classList.add("active");
+            activeContent.scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Highlight the selected tab + nav link
+        const activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`);
+        const activeLink = document.querySelector(`.nav-link[data-tab="${tabName}"]`);
+        if (activeTab) activeTab.classList.add("active");
+        if (activeLink) activeLink.classList.add("active");
+    }
+
+    // Event listeners
+    tabs.forEach(tab => tab.addEventListener("click", () => switchTab(tab.dataset.tab)));
+    navLinks.forEach(link => link.addEventListener("click", e => {
+        e.preventDefault();
+        switchTab(link.dataset.tab);
+    }));
+</script>
+
